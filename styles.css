@@ -1,23 +1,58 @@
 :root {
   --blue: #292C51;
+  --dark: #242535;
   --gray: #BFBFBF;
   --white: #EAF2E6;
 
   --font: 'Hind Vadodara', sans-serif;
+  --bigSize: 1.5em;
+  --mediumSize: 1.3em;
+  --smallSize: 1.1em;
 }
 
-* {
-  /*border: 1px solid red;*/
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   font-family: var(--font);
   
-  background-color: var(--gray);
+  background-color: var(--dark);
+  
+  display: flex;
+  justify-content: center;
 }
 
+::-webkit-scrollbar {
+  width: 10px;
+  display: block;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent; 
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+ 
+::-webkit-scrollbar-thumb {
+  background: var(--white); 
+  border-radius: 25px;
+  border-right: none;
+  border-left: none;
+  height: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gray); 
+}
+
+
 nav {
-  width: 100%;
+  z-index: 1;
+  position: fixed;
+  top: 1%;
+  left: 1%;
+  width: 98%;
   height: 15vh;
 
   background-color: var(--blue);
@@ -29,7 +64,7 @@ nav {
 }
 
 .nav-img {
-  width: 15%;
+  width: 5vw;
 }
 
 .nav-links {
@@ -46,23 +81,75 @@ nav {
   padding: 10px;
   margin: 0 10px 0 10px;
 
-  min-width: 100px;
+  min-width: 8vw;
 
   text-align: center;
 }
 
-a:link, a:visited {
+.nav-item:link, .nav-item:visited {
   text-decoration: none;
   background: linear-gradient(to left, var(--white)50%, var(--blue)50%);
   background-size: 202% 100%;
-  background-position: left-bottom;
+  background-position: right-bottom;
   color: var(--white);
-  font-size: 1.3em;
+  font-size: var(--mediumSize);
 
   transition: ease background-position .5s, ease-out color .3s;
 }
 
-a:hover, a:active {
+.nav-item:hover, .nav-item:active {
   background-position: right bottom;
   color: var(--blue);
+}
+
+header {
+  height: 95vh;
+  width: 95vw;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  color: var(--white);
+}
+
+header div {
+  position: relative;
+  top: 40%;
+
+  width: 40vw;
+  padding: 1vw;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  border: solid 3px var(--white);
+
+}
+
+.link {
+  text-decoration: none;
+  font-size: var(--mediumSize);
+  text-align: center;
+
+  border: solid 3px var(--white);
+  padding: 10px;
+
+  transition: ease background-color .5s, ease-out color .3s;
+}
+
+.bg-blue {
+  background-color: var(--blue)!important;
+  color: var(--white)!important;
+}
+.bg-white {
+  background-color: var(--white)!important;
+  color: var(--blue)!important;
+}
+
+.title {
+  font-size: 3em;
 }
