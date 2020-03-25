@@ -4,6 +4,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="stylesheet" type="text/css" href="styles.css">
+  <script src="https://kit.fontawesome.com/c4efcb5b8c.js" crossorigin="anonymous"></script>
   <link href="https://fonts.googleapis.com/css?family=Hind+Vadodara&display=swap" rel="stylesheet">
 
   <title>Luan da Silveira de Souza</title>
@@ -21,28 +22,59 @@
       <div class="nav-links">
         <a href="#about" class="nav-item">Sobre Mim</a>
         <a href="#projects" class="nav-item">Projetos</a>
-        <a href="#contacts" class="nav-item">Contato</a>
+        <a href="#contacts" class="nav-item">Contatos</a>
       </div>
     </nav>
     
-    <header id="particles-js">
-      <div>
-        <h1 class="title">Luan da Silveira de Souza</h1> 
+    <header>
+      <div class="particles" id="particles-js"></div>
+
+      <div class="outdoor">
+        <h1 class="title">Luan Souza</h1> 
         <h1>Desenvolvedor Fullstack</h1>
-        <a href="#contacts" class="link bg-white" id="link">Contrate meus Serviços!</a>
-      </div>
+
+        <div class="header-links">
+          <a href="https://github.com/LuanSilveiraSouza" class="header-link"><i class="fab fa-github"></i></a>
+          <a href="mailto: luansouzasilveira@gmail.com" class="header-link"><i class="far fa-envelope"></i></a>
+          <a href="https://www.linkedin.com/in/luan-souza-6b07b1171/" class="header-link"><i class="fab fa-linkedin"></i></a>
+        </div>
+
+        <a href="#contacts" class="outdoor-link bg-white" id="link">Entrar em Contato</a>
+      </div>  
+
+      <a href="#about" class="header-link" style="font-size: 2vw;position: relative; bottom: 5%;"><i class="fas fa-arrow-circle-down"></i></a>
     </header>
   
-    <section id="about">
-      <h1>Sobre Mim</h1>
+    <section class="section about" id="about">
+      <h1 class="title">Sobre Mim</h1>
+
+      <div class="grid-2">
+        <figure>
+          <img style="width: 15vw;" src="./assets/icon-white.png" alt="icon">
+        </figure>
+        <p style="width: 40vw;">Meu nome é Luan da Silveira de Souza, sou do Rio Grande do Sul e tenho 18 anos, porém programo desde os 15.
+          Atuo como <strong>Desenvolvedor Fullstack</strong>, construindo o <strong>Backend</strong>, <strong>Frontend</strong> 
+          e <strong>Mobile</strong> de aplicações e utilizando as ferramentas e tecnologias mais modernas do mercado
+          para solucionar problemas da forma mais efetiva e gerar resultados positivos para os clientes.
+        </p>
+      </div>
+
+      <h1>Competências</h1>
+
+      <div class="card-grid">
+        <div class="card"><p>HTML</p></div>
+        <div class="card"><p>CSS</p></div>
+        <div class="card"><p>Javascript</p></div>
+        <div class="card"><p>Bootstrap</p></div>
+      </div>
     </section>
   
-    <section id="projects">
-      <h1>Meus Projetos</h1>
+    <section class="section" id="projects">
+      <h1 class="title">Meus Projetos</h1>
     </section>
   
-    <section id="contacts">
-      <h1>Contatos</h1>
+    <section class="section" id="contacts">
+      <h1 class="title">Contatos</h1>
     </section>
 
   </div>

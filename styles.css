@@ -1,3 +1,4 @@
+/* VARIABLES ////////////////////////////////////////////////////////////////*/
 :root {
   --blue: #292C51;
   --dark: #242535;
@@ -10,10 +11,12 @@
   --smallSize: 1.1em;
 }
 
+/* PAGE CONFIGURATION ////////////////////////////////////////////////////////////////*/
 html {
   scroll-behavior: smooth;
 }
 
+/*  ////////////////////////////////////////////////////////////////*/
 body {
   font-family: var(--font);
   
@@ -23,6 +26,29 @@ body {
   justify-content: center;
 }
 
+/* UTILS CLASSES ////////////////////////////////////////////////////////////////*/
+.title {
+  font-size: 3em;
+}
+
+.section {
+  width: 95vw;
+  margin: 1vw;
+
+  color: var(--white);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+/* SCROLLBAR STYLE ////////////////////////////////////////////////////////////////*/
 ::-webkit-scrollbar {
   width: 10px;
   display: block;
@@ -46,7 +72,7 @@ body {
   background: var(--gray); 
 }
 
-
+/* NAVBAR STYLE ////////////////////////////////////////////////////////////////*/
 nav {
   z-index: 1;
   position: fixed;
@@ -102,35 +128,38 @@ nav {
   color: var(--blue);
 }
 
+/* HEADER STYLE ////////////////////////////////////////////////////////////////*/
 header {
   height: 95vh;
   width: 95vw;
 
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-
-  color: var(--white);
 }
 
-header div {
-  position: relative;
-  top: 40%;
+.particles {
+ z-index: -1;
+ height: 95vh;
+ width: 95vw;
+}
+
+.outdoor {
+  position: absolute;
+  top: 30%;
 
   width: 40vw;
   padding: 1vw;
 
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 
   border: solid 3px var(--white);
-
+  color: var(--white);
 }
 
-.link {
+.outdoor-link {
   text-decoration: none;
   font-size: var(--mediumSize);
   text-align: center;
@@ -150,6 +179,46 @@ header div {
   color: var(--blue)!important;
 }
 
-.title {
-  font-size: 3em;
+.header-links {
+  margin: 1vw;
+  width: 30%;
+
+  display: flex;
+  justify-content: space-around;
 }
+
+.header-link {
+  color: var(--white);
+  font-size: var(--bigSize);
+
+  transition: ease color .2s;
+}
+
+.header-link:hover, .header-link:active {
+  color: var(--blue);
+}
+
+/* "ABOUT" SECTION STYLE ////////////////////////////////////////////////////////////////*/
+.about p{
+  text-align: justify;
+  line-height: 3;
+  font-size: var(--smallSize);
+}
+
+.card-grid {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+}
+
+.card {
+  border: solid 3px var(--white);
+  border-radius: 10px;
+
+  width: 15vw;
+  height: 50vh;
+
+  margin: 20px;
+}
+
+
