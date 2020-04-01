@@ -245,3 +245,51 @@ header {
   background-color: var(--gray);
 }
 
+/* "Projects" SECTION STYLE ////////////////////////////////////////////////////////////////*/
+
+/* "Contacts" SECTION STYLE ////////////////////////////////////////////////////////////////*/
+.contacts {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contacts ul {
+  list-style: none;
+
+  text-align: center;
+}
+
+.contacts ul li h2{
+  border-bottom: 3px solid var(--white);
+}
+
+.contacts a:link, .contacts a:visited{
+  text-decoration: none;
+  color: var(--white);
+}
+
+.contacts a:hover, .contacts a:active{
+  text-decoration: none;
+  color: var(--gray);
+}
+
+/* FOOTER STYLE ////////////////////////////////////////////////////////////////*/
+footer {
+  background-color: var(--blue);
+
+  height: 15vh;
+  width: 99vw;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+
+  color: var(--white);
+}
+
+footer img {
+  width: 3vw;
+}
+
