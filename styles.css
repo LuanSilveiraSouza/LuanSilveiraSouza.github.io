@@ -45,11 +45,6 @@ body {
   align-items: center;
 }
 
-.grid-2 {
-  display: grid;
-  grid-template-columns: auto auto;
-}
-
 /* SCROLLBAR STYLE ////////////////////////////////////////////////////////////////*/
 ::-webkit-scrollbar {
   width: 10px;
@@ -81,7 +76,7 @@ nav {
   top: 1%;
   left: 1%;
   width: 98%;
-  height: 15vh;
+  height: 15%;
 
   background-color: var(--blue);
   box-shadow: 0px 15px 10px -15px black;
@@ -92,7 +87,7 @@ nav {
 }
 
 .nav-img {
-  width: 5vw;
+  width: 15%;
 }
 
 .nav-links {
@@ -106,10 +101,10 @@ nav {
 .nav-item {
   border: solid 3px var(--white);
 
-  padding: 10px;
+  padding: 1vw;
   margin: 0 10px 0 10px;
 
-  min-width: 8vw;
+  min-width: 10%;
 
   text-align: center;
 }
@@ -128,6 +123,18 @@ nav {
 .nav-item:hover, .nav-item:active {
   background-position: right bottom;
   color: var(--blue);
+}
+
+@media (max-width: 1080px) {
+  .nav-img {
+    width: 50px;
+  }
+  .nav-item {
+    padding: 2vw;
+  }
+}
+@media (max-width: 600px) {
+  /* TODO: NavLink Collapse */
 }
 
 /* HEADER STYLE ////////////////////////////////////////////////////////////////*/
@@ -159,6 +166,10 @@ header {
 
   border: solid 3px var(--white);
   color: var(--white);
+}
+
+.outdoor h1 {
+  text-align: center;
 }
 
 .outdoor-link {
@@ -200,11 +211,54 @@ header {
   color: var(--blue);
 }
 
+.arrow {
+  font-size: 3vw;
+  position: relative;
+  bottom: 5%;
+}
+
+@media (max-width: 1080px) {
+  .outdoor {
+    padding: 2vw;
+    width: 60vw;
+  }
+  .outdoor h1 {
+    font-size: var(--bigSize);
+  }
+  .arrow {
+    font-size: 40px;
+  }
+}
+@media (max-width: 600px) {
+  .header-links {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .header-link {
+    margin-bottom: 5px;
+  }
+}
+
 /* "ABOUT" SECTION STYLE ////////////////////////////////////////////////////////////////*/
 .about p{
   text-align: justify;
   line-height: 3;
   font-size: var(--smallSize);
+}
+
+.grid-2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.grid-2 img {
+  width: 15vw;
+}
+
+.grid-2 p {
+  width: 40vw;;
 }
 
 .about h1 {
@@ -226,7 +280,7 @@ header {
   border-bottom: 5px solid var(--blue);
   border-radius: 5px;
 
-  height: 20vh;
+  height: 50%;
   width: 10vw;
   margin: 30px;
   padding: 10px;
@@ -235,14 +289,56 @@ header {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  text-align: center;
 }
 
 .card i{
   font-size: 4vw;
 }
 
+.card p {
+  font-size: var(--smallSize);
+}
+
 .card:hover {
   background-color: var(--gray);
+}
+
+@media (max-width: 1080px) {
+  .grid-2 {
+    flex-direction: column;
+    justify-content: center;
+    
+    text-align: justify;
+
+    width: 100%;
+  }
+
+  .grid-2 img {
+    width: 200px;
+  }
+
+  .grid-2 p {
+    width: 80vw;
+  }
+
+  .card-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .card {
+    width: 80%;
+    margin: 50px;
+  }
+
+  .card i {
+    font-size: 50px;
+  }
+}
+@media (max-width: 600px) {
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* "Projects" SECTION STYLE ////////////////////////////////////////////////////////////////*/
@@ -262,6 +358,7 @@ header {
 
 .contacts ul li h2{
   border-bottom: 3px solid var(--white);
+  font-size: var(--mediumSize);
 }
 
 .contacts a:link, .contacts a:visited{
@@ -290,6 +387,6 @@ footer {
 }
 
 footer img {
-  width: 3vw;
+  width: 40px;
 }
 
