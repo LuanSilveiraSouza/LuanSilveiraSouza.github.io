@@ -86,6 +86,14 @@ nav {
   justify-content: space-between;
 }
 
+nav input {
+  display: none;
+}
+
+nav label {
+  display: none;
+}
+
 .nav-img {
   width: 15%;
 }
@@ -135,6 +143,39 @@ nav {
 }
 @media (max-width: 600px) {
   /* TODO: NavLink Collapse */
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    flex: 0;
+
+    width: 96%;
+
+    position: absolute;
+    top: 90%;
+    right: -110%;
+
+    background-color: var(--blue);
+    box-shadow: 0px 15px 10px -15px black;
+    padding: 2vw;
+
+    transition: all 1s;
+  }
+  .nav-item {
+    width: 50%;
+    margin-top: 1vw;
+  }
+
+  nav label {
+    display: flex;
+    color: var(--white);
+
+    font-size: 30px;
+    margin: 5vw;
+  }
+
+  nav input:checked~ .nav-links {
+    right: -1%;
+  }
 }
 
 /* HEADER STYLE ////////////////////////////////////////////////////////////////*/
@@ -145,6 +186,7 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 
 .particles {
@@ -155,7 +197,10 @@ header {
 
 .outdoor {
   position: absolute;
-  top: 30%;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
 
   width: 40vw;
   padding: 1vw;
@@ -209,12 +254,6 @@ header {
 
 .header-link:hover, .header-link:active {
   color: var(--blue);
-}
-
-.arrow {
-  font-size: 3vw;
-  position: relative;
-  bottom: 10%;
 }
 
 @media (max-width: 1080px) {
@@ -298,10 +337,6 @@ header {
 
 .card p {
   font-size: var(--smallSize);
-}
-
-.card:hover {
-  background-color: var(--gray);
 }
 
 @media (max-width: 1080px) {
