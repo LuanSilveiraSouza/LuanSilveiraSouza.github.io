@@ -378,6 +378,25 @@ header {
 
 /* "Projects" SECTION STYLE ////////////////////////////////////////////////////////////////*/
 
+.project-img {
+  height: 20vw;
+  width: 40vw;
+
+  margin: 10px;
+}
+
+@media (max-width: 900px) {
+  .project-div {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .project-img {
+    height: 40vw;
+    width: 80vw;
+  }
+}
+
 /* "Contacts" SECTION STYLE ////////////////////////////////////////////////////////////////*/
 .contacts {
   display: flex;
